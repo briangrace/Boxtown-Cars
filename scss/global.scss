@@ -1,0 +1,56 @@
+@import "compass/css3";
+$experimental-support-for-svg: true;
+
+@import "bits";
+@import "normalize";
+@import "typography";
+@import "nav";
+@import "toolbox";
+@import "header";
+@import "icons";
+@import "buttons";
+
+html {
+  background: url(/images/hexabump.png);
+  color: white;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+.page-wrap {
+  width: 80%;
+  margin: 20px auto;
+  @extend .group;
+  @include breakpoint(papa-bear) {
+    width: 70%;
+  }
+  @include breakpoint(baby-bear) {
+    width: 96%;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.guts {
+  width: 100%;
+  display: -webkit-flex;
+  background: url(/images/debut_light.png);
+  @include breakpoint(retina) {
+    background: url(/images/debut_light_@2X.png
+    );
+  }
+  @include breakpoint(baby-bear) {
+    background: url(/images/debut_light.png);
+  }
+  color: #333;
+}
+
+@import "grid";
+@import "modules";
+@import "sidebar";
+@import "footer";

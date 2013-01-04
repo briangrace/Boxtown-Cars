@@ -1,0 +1,25 @@
+$yellow: yellow;
+$blue: #17bfe3;
+$green: #90c28f;
+
+$padding: 20px;
+
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 800px)  { @content; }
+  }
+  @else if $point == retina {
+    @media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    @content;
+}
+  }
+}

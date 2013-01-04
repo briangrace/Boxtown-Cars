@@ -1,0 +1,20 @@
+.main-header {
+  padding: 0 0 0 120px;
+  margin: 0 0 10px 0;
+  @extend .group;
+  background: url(/images/logo.svg) no-repeat top left;
+  background-size: contain;
+  .no-svg & {
+    background-image: url(/images/logo.png);
+  }
+  @include breakpoint(baby-bear) {
+    padding-left: 80px;
+  }
+}
+
+.site-title {
+  color: white;
+}
+.site-tag {
+  color: $yellow;
+}

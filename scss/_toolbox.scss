@@ -1,0 +1,11 @@
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.visually-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px
+}

@@ -1,0 +1,56 @@
+.module {
+  box-shadow: 0 0 10px rgba(black, 0.4);
+  padding: $padding;
+  @include background(
+    linear-gradient(
+      top,
+      white,
+      #e4e4e4
+    )
+  );
+  position: relative;
+  margin: 0 0 $padding 0;
+}
+
+.module-featured-car {
+  padding: $padding/4;
+  img {
+    display: block; // prevents under-weird spacing
+  }
+  .hero {
+    width: 100%;
+  }
+  .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .more-info {
+    background: rgba(white, 0.8);
+    padding: 15px;
+    position: relative;
+    ul {
+      padding: 0 0 10px 0;
+      margin: 0;
+      li {
+        font-size: 0.8em;
+      }
+
+    }
+    @include breakpoint(baby-bear) {
+      ul {
+        margin: 10px 0 0 20px;
+      }
+      padding: 5px 10px 0 10px;
+    }
+  }
+}
+
+.little-car {
+  padding: $padding/4;
+  font-size: 0.7em;
+  @include breakpoint(baby-bear) {
+    text-align: center;
+  }
+}
